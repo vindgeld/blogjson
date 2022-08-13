@@ -4,7 +4,7 @@ const container = document.querySelector('.blogs');
 const searchForm = document.querySelector('.search');
 
 const renderPosts = async (term) => {
-    let uri = '/posts?_sort=likes&_order=desc';
+    let uri = '/data?_sort=likes&_order=desc';
     if (term) {
         uri += `&q=${term}`;
     }
