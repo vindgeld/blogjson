@@ -7,7 +7,7 @@ const createPost = async (e) => {
         body: form.body.value,
         likes: 10
     }
-    await fetch('/posts', {
+    await fetch('/data', {
         method: 'POST',
         body: JSON.stringify(doc),
         headers: { 'Content-Type': 'application/json' }
