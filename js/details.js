@@ -5,7 +5,7 @@ const container = document.querySelector('.details');
 const deleteBtn = document.querySelector('.delete');
 
 const renderDetails = async () => {
-    const res = await fetch(`/data/${id}`);
+    const res = await fetch(`/posts/${id}`);
     const post = await res.json();
     
     const template = `
@@ -17,7 +17,7 @@ const renderDetails = async () => {
 
 deleteBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    await fetch(`/data/${id}`, {
+    await fetch(`/posts/${id}`, {
         method: 'DELETE'
     });
     window.location.replace('/index.html');
